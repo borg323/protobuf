@@ -7,6 +7,8 @@ flags = cc.get_supported_arguments([ '-DHAVE_PTHREAD', '-Wno-sign-compare',
                                      '/wd4146', '/wd4244', '/wd4305', '/wd4506' ])
 deps = dependency('threads')
 
+include_path = meson.current_source_dir() + '/src'
+
 libprotobuf_lite_src = [
   'src/google/protobuf/stubs/atomicops_internals_x86_gcc.cc',
   'src/google/protobuf/stubs/atomicops_internals_x86_msvc.cc',
